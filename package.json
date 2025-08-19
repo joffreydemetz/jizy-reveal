@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "type": "module",
   "files": [
-    "dist/jizy-reveal.min.js",
+    "dist/js/jizy-reveal.min.js",
     "lib/js/reveal.js",
     "lib/index.js"
   ],
