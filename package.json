@@ -1,0 +1,34 @@
+{
+  "name": "jizy-reveal",
+  "version": "2.0.0",
+  "browser": "dist/js/jizy-reveal.min.js",
+  "main": "lib/index.js",
+  "type": "module",
+  "files": [
+    "dist/jizy-reveal.min.js",
+    "lib/js/reveal.js",
+    "lib/index.js"
+  ],
+  "scripts": {
+    "jpack:export": "node ./cli/jpack.js -t perso",
+    "jpack:export-debug": "node ./cli/jpack.js -t perso --debug",
+    "jpack:dist": "node ./cli/jpack.js -t dist -n default",
+    "jpack:dist-debug": "node ./cli/jpack.js -t dist -n default --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joffreydemetz/jizy-utils.git"
+  },
+  "keywords": [
+    "jizy",
+    "password",
+    "DOM",
+    "reveal"
+  ],
+  "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
+  "license": "MIT",
+  "description": "Reveal password input fields.",
+  "dependencies": {
+    "jizy-packer": "^2.0.0"
+  }
+}

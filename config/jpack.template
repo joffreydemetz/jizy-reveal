@@ -1,0 +1,3 @@
+import Reveal from '{{PREFIX}}lib/js/reveal.js';
+
+export default Reveal;

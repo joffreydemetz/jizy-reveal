@@ -1,0 +1,19 @@
+{
+    "name": "jdz/jizy-utils",
+    "type": "library",
+    "description": "A simple JS utility library",
+    "keywords": [
+        "JDZ",
+        "Utilities"
+    ],
+    "homepage": "https://jdz.joffreydemetz.com/jutils",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joffrey Demetz",
+            "email": "joffrey.demetz@gmail.com",
+            "homepage": "https://joffreydemetz.com",
+            "role": "Lead"
+        }
+    ]
+}
