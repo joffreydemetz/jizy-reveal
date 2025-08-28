@@ -1,20 +1,18 @@
-const jPackData = {
-    name: 'Reveal',
-    alias: 'jizy-reveal',
-    cfg: 'reveal',
-    assetsPath: 'dist',
+import { jPackConfig } from 'jizy-packer';
 
-    buildTarget: null,
-    buildZip: false,
-    buildName: 'default',
+const jPackData = function () {
+    jPackConfig.sets({
+        name: 'Reveal',
+        alias: 'jizy-reveal',
+    });
 
-    onCheckConfig: () => { },
+    jPackConfig.set('onCheckConfig', () => { });
 
-    onGenerateBuildJs: (code) => code,
+    jPackConfig.set('onGenerateBuildJs', (code) => code);
 
-    onGenerateWrappedJs: (wrapped) => wrapped,
+    jPackConfig.set('onGenerateWrappedJs', (wrapped) => wrapped);
 
-    onPacked: () => { }
+    jPackConfig.set('onPacked', () => { });
 };
 
 export default jPackData;

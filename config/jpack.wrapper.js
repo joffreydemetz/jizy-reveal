@@ -1,4 +1,4 @@
-/*! jUtils v@VERSION | @DATE | [@BUNDLE] */
+/*! jReveal v@VERSION | @DATE | [@BUNDLE] */
 (function (global) {
     "use strict";
 

@@ -1,12 +1,14 @@
 {
-    "name": "jdz/jizy-utils",
+    "name": "jdz/jizy-reveal",
     "type": "library",
-    "description": "A simple JS utility library",
+    "description": "Module to reveal password input fields.",
     "keywords": [
-        "JDZ",
-        "Utilities"
+        "jizy",
+        "password",
+        "DOM",
+        "reveal"
     ],
-    "homepage": "https://jdz.joffreydemetz.com/jutils",
+    "homepage": "https://jdz.joffreydemetz.com/jreveal",
     "license": "MIT",
     "authors": [
         {
