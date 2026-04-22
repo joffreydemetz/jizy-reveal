@@ -8,7 +8,7 @@
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "Reveal password input fields.",
-  "homepage": "https://jizy.joffreydemetz.com/jizy-reveal",
+  "homepage": "https://jizy.joffreydemetz.com/reveal",
   "files": [
     "dist/*",
     "lib/*"
