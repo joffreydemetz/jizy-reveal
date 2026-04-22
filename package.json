@@ -1,6 +1,6 @@
 {
   "name": "jizy-reveal",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "browser": "dist/js/jizy-reveal.min.js",
   "main": "lib/index.js",
   "type": "module",
