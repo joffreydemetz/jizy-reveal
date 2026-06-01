@@ -236,10 +236,72 @@ describe('_onKeyPressed', () => {
         expect(result).toBe(false);
     });
 
+    test('Escape hides the field', () => {
+        const r = new Reveal(setupInput());
+        r.show();
+        const evt = new window.KeyboardEvent('keydown', { key: 'Escape', cancelable: true });
+        const result = r._onKeyPressed(evt);
+        expect(r.readable).toBe(false);
+        expect(evt.defaultPrevented).toBe(true);
+        expect(result).toBe(false);
+    });
+
     test('non-Enter keys are ignored', () => {
         const r = new Reveal(setupInput());
         r.show();
         r._onKeyPressed(new window.KeyboardEvent('keydown', { key: 'a', cancelable: true }));
+        expect(r.readable).toBe(true);
+    });
+});
+
+describe('autoHide option', () => {
+    test('defaults to true and auto-hides on outside click', () => {
+        const r = new Reveal(setupInput());
+        r.show();
+        const outside = document.createElement('div');
+        document.body.appendChild(outside);
+        outside.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
+        expect(r.readable).toBe(false);
+    });
+
+    test('when false, outside clicks do not hide', () => {
+        const r = new Reveal(setupInput(), { autoHide: false });
+        r.show();
+        const outside = document.createElement('div');
+        document.body.appendChild(outside);
+        outside.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
+        expect(r.readable).toBe(true);
+    });
+
+    test('when false, keydown does not hide', () => {
+        const input = setupInput();
+        const r = new Reveal(input, { autoHide: false });
+        r.show();
+        input.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }));
+        expect(r.readable).toBe(true);
+    });
+
+    test('when false, the toggle button still works', () => {
+        const r = new Reveal(setupInput(), { autoHide: false });
+        getButton(r).dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
+        expect(r.readable).toBe(true);
+    });
+});
+
+describe('destroy()', () => {
+    test('removes the toggle button from the DOM', () => {
+        const r = new Reveal(setupInput());
+        expect(getButton(r)).not.toBeNull();
+        r.destroy();
+        expect(getButton(r)).toBeNull();
+    });
+
+    test('outside clicks no longer toggle after destroy', () => {
+        const input = setupInput();
+        const r = new Reveal(input);
+        r.show();
+        r.destroy();
+        document.body.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
         expect(r.readable).toBe(true);
     });
 });
