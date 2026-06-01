@@ -8,25 +8,16 @@
   "license": "MIT",
   "description": "Reveal password input fields.",
   "homepage": "https://jizy.joffreydemetz.com/reveal",
-  "files": [
-    "dist/*",
-    "lib/*"
-  ],
   "keywords": [
     "jizy",
     "password",
     "DOM",
     "reveal"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joffreydemetz/jizy-reveal.git"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jizy-packer": "^2.1.44"
-  },
+  "files": [
+    "dist/*",
+    "lib/*"
+  ],
   "scripts": {
     "jpack:dist": "node ./cli/jpack.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
@@ -37,5 +28,14 @@
       "<rootDir>/tests/**/*.test.js"
     ],
     "transform": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joffreydemetz/jizy-reveal.git"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jizy-packer": "^2.1.44"
   }
 }
